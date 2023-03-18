@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "9a9f1db272cea3eccb81a685e7608a29c2b3f19da5f9252cf250fffff6a0c686"
+            "sha256": "2e03d99005c84fe95ac4cb0d588fbd194aea4ea21c1d8c7affbdc1d8cc76102b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -324,6 +324,13 @@
             "markers": "python_version >= '3.7'",
             "version": "==2.1.2"
         },
+        "mysql-connector": {
+            "hashes": [
+                "sha256:1733e6ce52a049243de3264f1fbc22a852cb35458c4ad739ba88189285efdf32"
+            ],
+            "index": "pypi",
+            "version": "==2.2.9"
+        },
         "psycopg2": {
             "hashes": [
                 "sha256:093e3894d2d3c592ab0945d9eba9d139c139664dcf83a1c440b8a7aa9bb21955",
@@ -426,6 +433,14 @@
                 "sha256:e644fdec12f7872f86c58ff790da456218b10f863970249516d60a5eaca77206"
             ],
             "version": "==2.21"
+        },
+        "pymysql": {
+            "hashes": [
+                "sha256:41fc3a0c5013d5f039639442321185532e3e2c8924687abe6537de157d403641",
+                "sha256:816927a350f38d56072aeca5dfb10221fe1dc653745853d30a216637f5d7ad36"
+            ],
+            "index": "pypi",
+            "version": "==1.0.2"
         },
         "sqlalchemy": {
             "hashes": [
