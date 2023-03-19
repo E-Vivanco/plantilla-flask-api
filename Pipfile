@@ -11,6 +11,8 @@ flask-core = "*"
 pymysql = "*"
 mysql-connector = "*"
 requests = "*"
+flask-cors = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
