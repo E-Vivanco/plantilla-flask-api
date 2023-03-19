@@ -85,7 +85,7 @@ def delete_user(id):
     return jsonify({ "message": "User Deleted" }), 202
 
 @app.route('/api/characters', methods=['GET'])
-def get_characters():
+def get_character():
 
     characters = Character.query.all()
     characters = list(map(lambda character: character.serialize(), characters))
@@ -106,7 +106,7 @@ def create_character():
     return jsonify(character.serialize()), 201
 @app.route('/api/characters/<int:id>', methods=['PATCH'])
 def update_character(id):
-    # UPDATE user SET name="", lastname="" email="", password="" WHERE id = ?
+    # UPDATE user SET name="" WHERE id = ?
     
     name = request.json.get('name') # None
     mass = request.json.get('mass') # None
@@ -123,6 +123,16 @@ def update_character(id):
     
     
     return jsonify(character.serialize()), 202
+    
+@app.route('/api/characters/<int:id>', methods=['DELETE'])
+def delete_character(id):
+    # SELECT * FROM users WHERE id = ?
+    character = Character.query.get(id)
+
+    # DELETE FROM users WHERE id=?
+    character.delete()
+
+    return jsonify({ "message": "Character Deleted" }), 202
 
 
 
