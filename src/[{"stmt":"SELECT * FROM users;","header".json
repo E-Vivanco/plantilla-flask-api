@@ -1,1 +1,0 @@
-[{"stmt":"SELECT * FROM users;","header":["id","name","lastname","email","password"],"rows":[["1","polo","perez","n@s.cl","676767"],["2","polo","perez","n@1s.cl","676767"]]}]
