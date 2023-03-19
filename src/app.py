@@ -104,6 +104,29 @@ def create_character():
     character.save()
 
     return jsonify(character.serialize()), 201
+@app.route('/api/characters/<int:id>', methods=['PATCH'])
+def update_character(id):
+    # UPDATE user SET name="", lastname="" email="", password="" WHERE id = ?
+    
+    name = request.json.get('name') # None
+    mass = request.json.get('mass') # None
+    skin =  request.json.get('skin') # None
+    hair =  request.json.get('hair') # None
+
+    # SELECT * FROM users WHERE id #
+    character = Character.query.get(id)
+    character.name = name
+    character.mass = mass
+    character.skin = skin
+    character.hair = hair
+    character.update()
+    
+    
+    return jsonify(character.serialize()), 202
+
+
+
+
 
 with app.app_context():
     db.create_all()
